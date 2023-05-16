@@ -52,7 +52,7 @@ class UnhandledError extends WatanaApiException {
     protected $message = "Unhandled error";
 }
 /**
- * Invalid API Key
+ * Invalid URL Y TOKEN
  */
 namespace WatanaApi\Error;
 
@@ -60,7 +60,7 @@ class InvalidApiToken extends WatanaApiException {
     protected $message = "API Token invalido";
 }
 /**
- * Unable to connect to Culqi API
+ * Unable to connect to Watana API
  */
 class UnableToConnect extends WatanaApiException {
     protected $message = "Imposible conectar a Watana API, verifique la RUTA y TOKEN";

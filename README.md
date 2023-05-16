@@ -62,7 +62,7 @@ composer install
 Como primer paso hay que configurar las credenciales `$RUTA ``$TOKEN `
 
 ```php
-// Configurar tu API Key y autenticación
+// Configurar tu RUTA y TOKEN
 $RUTA = "<RUTA>";
 $TOKEN = "<TOKEN>";
 $auth = new WatanaApi\WatanaApiAuth(array('url' => $RUTA, 'token' => $TOKEN));
