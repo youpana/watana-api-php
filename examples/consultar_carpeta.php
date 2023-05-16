@@ -10,7 +10,7 @@ try {
     $auth = new WatanaApi\WatanaApiAuth(array('url' => $URL, 'token' => $TOKEN));
   
     $req_body = array(
-        "carpeta_codigos" => "DOC0001"
+        "carpeta_codigo" => "DOC0001"
     );
         
     // Consultamos carpeta
