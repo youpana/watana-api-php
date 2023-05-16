@@ -45,7 +45,7 @@ Ahora, incluir en la cabecera a `watana-api-php` y también la dependencia [`Req
 
 ```php
 <?php
-// Cargamos Requests y Culqi PHP
+// Cargamos Requests y WatanaApi PHP
 include_once dirname(__FILE__).'/libraries/Requests/library/Requests.php';
 Requests::register_autoloader();
 include_once dirname(__FILE__).'/libraries/watana-api-php/lib/WatanaApi.php';
@@ -68,7 +68,22 @@ $TOKEN = "<TOKEN>";
 $auth = new WatanaApi\WatanaApiAuth(array('url' => $RUTA, 'token' => $TOKEN));
 ```
 
+## Enviar Carpeta
 
+[Ver ejemplo completo](/examples/enviar_carpeta.php)
+
+```php
+$response = $auth->WatanaApi->EnviarCarpeta(
+    array(
+        "carpeta_codigo" => "DOC0001",
+        "titulo" => "Carpeta de Prueba",
+        ...
+    )
+);
+
+//Respuesta
+print_r($response);
+```
 
 ## Consultar Carpeta
 
@@ -108,23 +123,6 @@ $response = $auth->WatanaApi->EliminarCarpeta(
         "carpeta_codigo" => "DOC0001"
     )
     );
-
-//Respuesta
-print_r($response);
-```
-
-## Enviar Carpeta
-
-[Ver ejemplo completo](/examples/enviar_carpeta.php)
-
-```php
-$response = $auth->WatanaApi->EnviarCarpeta(
-    array(
-        "carpeta_codigo" => "DOC0001",
-        "titulo" => "Carpeta de Prueba",
-        ...
-    )
-);
 
 //Respuesta
 print_r($response);
